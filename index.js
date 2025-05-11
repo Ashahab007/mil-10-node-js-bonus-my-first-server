@@ -5,16 +5,17 @@ const express = require("express");
 const app = express();
 const port = 5000;
 
+// 2.2 create the home path
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
-// 2.4 now creating another path for example
+// 2.4 now creating another path for data for example
 app.get("/data", (req, res) => {
   res.send("more data coming soon");
 });
 
-// 2.5 now in terminal press Ctrl + c to stop server then run again  node index.js then in browser url type after localhost:5000/data. and refresh the browser. If u updata anything in any path. every time u should follow this. this is for temporary use only.
+// 2.5 now in terminal press Ctrl + c to stop server then run again  node index.js then in browser url type localhost:5000/data. and refresh the browser. If u updata anything in any path every time u should follow this. this is for temporary use only.
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
